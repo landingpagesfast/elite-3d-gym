@@ -70,16 +70,9 @@
     }
 
     /* Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--bg);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--accent);
-      border-radius: 4px;
-    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
 
     /* Typography */
     h1, h2, h3, h4 {
@@ -87,28 +80,22 @@
       line-height: 1.1;
       letter-spacing: -0.02em;
     }
-
     h1 { font-size: clamp(2.5rem, 8vw, 5rem); }
     h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
     h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 
-    /* Container */
+    /* Container & Sections */
     .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1.25rem;
     }
-
-    /* Section */
     section {
       padding: 5rem 0;
       position: relative;
     }
-
-    @media (min-width: 768px) {
-      section { padding: 7rem 0; }
-    }
+    @media (min-width: 768px) { section { padding: 7rem 0; } }
 
     /* Buttons */
     .btn {
@@ -127,32 +114,16 @@
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
     }
-
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px var(--accent-glow);
-    }
-
     .btn-whatsapp {
       background: #25d366;
       color: white;
     }
-
     .btn-whatsapp:hover {
       background: #1fb855;
       transform: translateY(-2px);
       box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
     }
-
     .btn:focus-visible {
       outline: 3px solid var(--accent-light);
       outline-offset: 3px;
@@ -169,13 +140,7 @@
       background: rgba(5, 5, 5, 0.9);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
-      transition: all 0.3s ease;
     }
-
-    .nav.scrolled {
-      background: rgba(5, 5, 5, 0.98);
-    }
-
     .nav-container {
       display: flex;
       align-items: center;
@@ -184,7 +149,6 @@
       margin: 0 auto;
       padding: 0 1.5rem;
     }
-
     .logo {
       font-size: 1.5rem;
       font-weight: 900;
@@ -194,7 +158,6 @@
       align-items: center;
       gap: 0.5rem;
     }
-
     .logo-icon {
       width: 40px;
       height: 40px;
@@ -203,37 +166,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
     }
-
     .nav-links {
       display: none;
       gap: 2rem;
       list-style: none;
     }
-
     .nav-links a {
       color: var(--fg-secondary);
       text-decoration: none;
       font-size: 0.85rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
       transition: color 0.3s ease;
     }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    @media (min-width: 768px) {
-      .nav-links { display: flex; }
-    }
-
-    .nav-cta {
-      padding: 0.75rem 1.25rem;
-      font-size: 0.8rem;
-    }
+    .nav-links a:hover { color: var(--accent); }
+    @media (min-width: 768px) { .nav-links { display: flex; } }
+    .nav-cta { padding: 0.75rem 1.25rem; font-size: 0.8rem; }
 
     /* Parallax Background */
     .parallax-bg {
@@ -242,20 +191,17 @@
       z-index: -1;
       overflow: hidden;
     }
-
     .parallax-layer {
       position: absolute;
       inset: 0;
       will-change: transform;
     }
-
     .parallax-gradient {
       background: 
         radial-gradient(ellipse 100% 60% at 50% 0%, rgba(255, 77, 0, 0.08), transparent 50%),
         radial-gradient(ellipse 60% 40% at 100% 50%, rgba(255, 77, 0, 0.05), transparent),
         radial-gradient(ellipse 50% 30% at 0% 80%, rgba(255, 77, 0, 0.04), transparent);
     }
-
     .parallax-grid {
       background-image: 
         linear-gradient(rgba(255, 77, 0, 0.03) 1px, transparent 1px),
@@ -264,20 +210,13 @@
       mask-image: radial-gradient(ellipse 80% 50% at 50% 30%, black, transparent);
     }
 
-    .parallax-noise {
-      opacity: 0.3;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    }
-
     /* Hero Section */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding-top: 5rem;
-      position: relative;
     }
-
     .hero-content {
       display: grid;
       gap: 2rem;
@@ -285,21 +224,11 @@
       position: relative;
       z-index: 2;
     }
-
     @media (min-width: 992px) {
-      .hero-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-      }
+      .hero-content { grid-template-columns: 1fr 1fr; gap: 3rem; }
     }
-
-    .hero-text {
-      text-align: center;
-    }
-
-    @media (min-width: 992px) {
-      .hero-text { text-align: left; }
-    }
+    .hero-text { text-align: center; }
+    @media (min-width: 992px) { .hero-text { text-align: left; } }
 
     .hero-badge {
       display: inline-flex;
@@ -317,7 +246,6 @@
       margin-bottom: 1.5rem;
       animation: fadeInUp 0.8s ease both;
     }
-
     .hero-badge-dot {
       width: 6px;
       height: 6px;
@@ -325,31 +253,24 @@
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
-
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.5; transform: scale(1.5); }
     }
 
-    .hero h1 {
-      margin-bottom: 1rem;
-      animation: fadeInUp 0.8s ease 0.1s both;
-    }
-
+    .hero h1 { margin-bottom: 1rem; animation: fadeInUp 0.8s ease 0.1s both; }
     .hero h1 .highlight {
       background: linear-gradient(135deg, var(--accent), var(--accent-light));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .hero-subtitle {
       font-size: 1.125rem;
       color: var(--fg-secondary);
       margin-bottom: 2rem;
       animation: fadeInUp 0.8s ease 0.2s both;
     }
-
     .hero-cta {
       display: flex;
       flex-direction: column;
@@ -357,14 +278,8 @@
       justify-content: center;
       animation: fadeInUp 0.8s ease 0.3s both;
     }
-
-    @media (min-width: 480px) {
-      .hero-cta { flex-direction: row; }
-    }
-
-    @media (min-width: 992px) {
-      .hero-cta { justify-content: flex-start; }
-    }
+    @media (min-width: 480px) { .hero-cta { flex-direction: row; } }
+    @media (min-width: 992px) { .hero-cta { justify-content: flex-start; } }
 
     /* 3D Canvas */
     .hero-3d {
@@ -373,10 +288,7 @@
       height: 400px;
       animation: fadeInUp 0.8s ease 0.4s both;
     }
-
-    @media (min-width: 992px) {
-      .hero-3d { height: 550px; }
-    }
+    @media (min-width: 992px) { .hero-3d { height: 550px; } }
 
     #hero-canvas {
       width: 100%;
@@ -384,35 +296,37 @@
       cursor: grab;
       touch-action: none;
     }
+    #hero-canvas:active { cursor: grabbing; }
 
-    #hero-canvas:active {
-      cursor: grabbing;
-    }
-
+    /* FIX: More visible hint */
     .hero-3d-hint {
       position: absolute;
-      bottom: 0.5rem;
+      bottom: 1.5rem;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 0.7rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: white;
+      background: rgba(255, 77, 0, 0.2);
+      border: 1px solid rgba(255, 77, 0, 0.5);
+      padding: 0.5rem 1.25rem;
+      border-radius: 30px;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      z-index: 10;
     }
-
     .hero-3d-hint i {
       animation: rotateHint 2s ease-in-out infinite;
+      color: var(--accent);
     }
-
     @keyframes rotateHint {
       0%, 100% { transform: rotate(-10deg); }
       50% { transform: rotate(10deg); }
     }
 
-    /* Decorative rings */
     .hero-rings {
       position: absolute;
       inset: 0;
@@ -420,30 +334,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 1;
     }
-
     .hero-ring {
       position: absolute;
-      border: 1px solid rgba(255, 77, 0, 0.1);
+      border: 1px solid rgba(255, 77, 0, 0.15);
       border-radius: 50%;
       animation: ringPulse 4s ease-in-out infinite;
     }
-
     .hero-ring:nth-child(1) { width: 300px; height: 300px; }
     .hero-ring:nth-child(2) { width: 400px; height: 400px; animation-delay: 0.5s; }
     .hero-ring:nth-child(3) { width: 500px; height: 500px; animation-delay: 1s; }
-
     @keyframes ringPulse {
       0%, 100% { opacity: 0.3; transform: scale(1); }
       50% { opacity: 0.6; transform: scale(1.05); }
     }
 
-    /* Section Header */
-    .section-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
+    /* Section Headers */
+    .section-header { text-align: center; margin-bottom: 4rem; }
     .section-label {
       display: inline-block;
       font-size: 0.75rem;
@@ -453,27 +361,16 @@
       letter-spacing: 0.2em;
       margin-bottom: 0.75rem;
     }
+    .section-header p { color: var(--fg-secondary); max-width: 600px; margin: 0 auto; }
 
-    .section-header p {
-      color: var(--fg-secondary);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Services Section - 3D Flip Cards */
-    .services {
-      background: linear-gradient(180deg, transparent, var(--bg-secondary), transparent);
-    }
-
+    /* Services Section */
+    .services { background: linear-gradient(180deg, transparent, var(--bg-secondary), transparent); }
     .services-grid {
       display: grid;
       gap: 2rem;
       perspective: 2000px;
     }
-
-    @media (min-width: 768px) {
-      .services-grid { grid-template-columns: repeat(3, 1fr); }
-    }
+    @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
 
     .flip-card {
       height: 380px;
@@ -482,14 +379,8 @@
       transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
     }
-
-    .flip-card:hover,
-    .flip-card.flipped {
-      transform: rotateY(180deg);
-    }
-
-    .flip-card-front,
-    .flip-card-back {
+    .flip-card:hover, .flip-card.flipped { transform: rotateY(180deg); }
+    .flip-card-front, .flip-card-back {
       position: absolute;
       inset: 0;
       backface-visibility: hidden;
@@ -497,7 +388,6 @@
       overflow: hidden;
       border: 1px solid var(--border);
     }
-
     .flip-card-front {
       background: var(--card);
       display: flex;
@@ -507,10 +397,8 @@
       padding: 2rem;
       text-align: center;
     }
-
     .flip-card-icon {
-      width: 100px;
-      height: 100px;
+      width: 100px; height: 100px;
       background: linear-gradient(135deg, var(--accent), var(--accent-light));
       border-radius: 20px;
       display: flex;
@@ -520,20 +408,10 @@
       margin-bottom: 1.5rem;
       transition: transform 0.3s ease;
     }
-
-    .flip-card:hover .flip-card-icon {
-      transform: scale(1.1);
-    }
-
-    .flip-card-front h3 {
-      margin-bottom: 0.75rem;
-    }
-
-    .flip-card-front p {
-      font-size: 0.9rem;
-      color: var(--fg-secondary);
-    }
-
+    .flip-card:hover .flip-card-icon { transform: scale(1.1); }
+    .flip-card-front h3 { margin-bottom: 0.75rem; }
+    .flip-card-front p { font-size: 0.9rem; color: var(--fg-secondary); }
+    
     .flip-card-back {
       background: linear-gradient(135deg, var(--accent), var(--accent-dark));
       transform: rotateY(180deg);
@@ -542,17 +420,8 @@
       flex-direction: column;
       justify-content: center;
     }
-
-    .flip-card-back h3 {
-      margin-bottom: 1rem;
-      color: white;
-    }
-
-    .flip-card-back ul {
-      list-style: none;
-      margin-bottom: 1.5rem;
-    }
-
+    .flip-card-back h3 { margin-bottom: 1rem; color: white; }
+    .flip-card-back ul { list-style: none; margin-bottom: 1.5rem; }
     .flip-card-back li {
       display: flex;
       align-items: center;
@@ -561,21 +430,9 @@
       font-size: 0.9rem;
       color: rgba(255, 255, 255, 0.9);
     }
-
-    .flip-card-back li i {
-      color: white;
-    }
-
-    .flip-card-back .btn {
-      background: white;
-      color: var(--accent-dark);
-    }
-
-    .flip-card-back .btn:hover {
-      background: var(--bg);
-      color: white;
-    }
-
+    .flip-card-back li i { color: white; }
+    .flip-card-back .btn { background: white; color: var(--accent-dark); }
+    .flip-card-back .btn:hover { background: var(--bg); color: white; }
     .flip-hint {
       position: absolute;
       bottom: 1rem;
@@ -587,20 +444,10 @@
       letter-spacing: 0.1em;
     }
 
-    /* Stats Section - 3D Counters */
-    .stats {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stats-grid {
-      display: grid;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .stats-grid { grid-template-columns: repeat(3, 1fr); }
-    }
+    /* Stats Section */
+    .stats { position: relative; }
+    .stats-grid { display: grid; gap: 2rem; }
+    @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
 
     .stat-card {
       text-align: center;
@@ -613,24 +460,16 @@
       transform-style: preserve-3d;
       transition: transform 0.5s ease;
     }
-
     .stat-card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       height: 4px;
       background: linear-gradient(90deg, var(--accent), var(--accent-light));
     }
-
-    .stat-card:hover {
-      transform: translateY(-10px) rotateX(5deg);
-    }
-
+    .stat-card:hover { transform: translateY(-10px) rotateX(5deg); }
     .stat-icon {
-      width: 70px;
-      height: 70px;
+      width: 70px; height: 70px;
       margin: 0 auto 1.5rem;
       background: linear-gradient(135deg, rgba(255, 77, 0, 0.2), rgba(255, 77, 0, 0.05));
       border-radius: 50%;
@@ -641,15 +480,12 @@
       color: var(--accent);
       animation: float 3s ease-in-out infinite;
     }
-
     .stat-card:nth-child(2) .stat-icon { animation-delay: 0.5s; }
     .stat-card:nth-child(3) .stat-icon { animation-delay: 1s; }
-
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
-
     .stat-number {
       font-size: 3.5rem;
       font-weight: 900;
@@ -661,14 +497,12 @@
       justify-content: center;
       gap: 0.25rem;
     }
-
     .stat-number span {
       background: linear-gradient(135deg, var(--accent), var(--accent-light));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .stat-label {
       font-size: 0.9rem;
       color: var(--fg-secondary);
@@ -676,28 +510,27 @@
       letter-spacing: 0.1em;
     }
 
-    /* Gallery - 3D Carousel */
+    /* Gallery - 3D Carousel FIX */
     .gallery {
       background: linear-gradient(180deg, transparent, var(--bg-secondary), transparent);
-      overflow: hidden;
+      padding-bottom: 100px; /* Space for bubbles if they overlap */
     }
-
     .carousel-container {
-      perspective: 1500px;
-      height: 400px;
+      perspective: 1200px; /* Adjusted perspective */
+      height: 450px;
       position: relative;
+      width: 100%;
+      overflow: visible; /* Ensure items don't get cut off */
     }
-
     .carousel {
       position: absolute;
-      width: 280px;
-      height: 350px;
-      left: 50%;
-      top: 50%;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
       transform-style: preserve-3d;
       transition: transform 1s ease;
     }
-
     .carousel-item {
       position: absolute;
       width: 280px;
@@ -711,13 +544,12 @@
       background: var(--card);
       border: 1px solid var(--border);
       backface-visibility: hidden;
-      transition: box-shadow 0.5s ease;
+      transition: box-shadow 0.5s ease, opacity 0.5s ease;
     }
-
     .carousel-item.active {
       box-shadow: 0 25px 50px rgba(255, 77, 0, 0.3);
+      z-index: 10;
     }
-
     .carousel-image {
       width: 100%;
       height: 100%;
@@ -727,31 +559,26 @@
       justify-content: center;
       background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
     }
-
     .carousel-image i {
       font-size: 4rem;
       color: var(--accent);
       margin-bottom: 1rem;
       opacity: 0.7;
     }
-
     .carousel-image span {
       font-size: 0.9rem;
       color: var(--fg-secondary);
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
-
     .carousel-nav {
       display: flex;
       justify-content: center;
       gap: 1rem;
       margin-top: 2rem;
     }
-
     .carousel-btn {
-      width: 50px;
-      height: 50px;
+      width: 50px; height: 50px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 50%;
@@ -760,59 +587,57 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-
     .carousel-btn:hover {
       background: var(--accent);
       border-color: var(--accent);
       transform: scale(1.1);
     }
 
-    /* Testimonials - Floating Bubbles */
+    /* Testimonials - Floating Bubbles FIX */
     .testimonials {
       position: relative;
-      overflow: hidden;
+      overflow: visible; /* CRITICAL: Allow bubbles to float outside */
+      min-height: 600px; /* Ensure enough height */
     }
-
     .testimonials-container {
-      height: 500px;
+      height: 600px; /* Increased height for visibility */
       position: relative;
+      width: 100%;
     }
-
     .testimonial-bubble {
       position: absolute;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 1.5rem;
-      max-width: 300px;
-      animation: floatUp 15s linear infinite;
+      width: 280px; /* Fixed width for consistency */
       opacity: 0;
-      transform: translateY(100%);
+      z-index: 5;
+      pointer-events: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-
     .testimonial-bubble.active {
-      opacity: 1;
+      animation: floatUp 18s linear forwards; /* Slower, longer animation */
     }
-
+    
     @keyframes floatUp {
       0% {
         opacity: 0;
-        transform: translateY(100%) scale(0.8);
+        transform: translateY(100%) scale(0.8) rotate(-2deg);
       }
-      10% {
+      5% {
         opacity: 1;
-        transform: translateY(80%) scale(1);
+        transform: translateY(80%) scale(1) rotate(0deg);
       }
       90% {
         opacity: 1;
-        transform: translateY(-80%) scale(1);
+        transform: translateY(-650px) scale(1) rotate(2deg);
       }
       100% {
         opacity: 0;
-        transform: translateY(-100%) scale(0.8);
+        transform: translateY(-700px) scale(0.8);
       }
     }
-
     .testimonial-text {
       font-size: 0.9rem;
       color: var(--fg-secondary);
@@ -820,16 +645,13 @@
       line-height: 1.6;
       font-style: italic;
     }
-
     .testimonial-author {
       display: flex;
       align-items: center;
       gap: 0.75rem;
     }
-
     .testimonial-avatar {
-      width: 40px;
-      height: 40px;
+      width: 40px; height: 40px;
       background: linear-gradient(135deg, var(--accent), var(--accent-light));
       border-radius: 50%;
       display: flex;
@@ -838,78 +660,43 @@
       font-weight: 700;
       font-size: 0.85rem;
     }
-
-    .testimonial-name {
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .testimonial-role {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
+    .testimonial-name { font-size: 0.85rem; font-weight: 600; }
+    .testimonial-role { font-size: 0.75rem; color: var(--muted); }
 
     /* Pricing Table */
-    .pricing {
-      background: linear-gradient(180deg, transparent, var(--bg-secondary), transparent);
-    }
-
+    .pricing { background: linear-gradient(180deg, transparent, var(--bg-secondary), transparent); }
     .pricing-table-wrapper {
       overflow-x: auto;
       border-radius: 16px;
       border: 1px solid var(--border);
       background: var(--card);
     }
-
     .pricing-table {
       width: 100%;
       min-width: 600px;
       border-collapse: collapse;
     }
-
-    .pricing-table th,
-    .pricing-table td {
+    .pricing-table th, .pricing-table td {
       padding: 1.25rem 1.5rem;
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-
     .pricing-table th {
       background: var(--bg-tertiary);
       font-weight: 700;
       font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
-
-    .pricing-table td {
-      font-size: 0.95rem;
-    }
-
-    .pricing-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .pricing-table tr:hover td {
-      background: rgba(255, 77, 0, 0.03);
-    }
-
-    .pricing-plan {
-      font-weight: 700;
-    }
-
+    .pricing-table td { font-size: 0.95rem; }
+    .pricing-table tr:last-child td { border-bottom: none; }
+    .pricing-table tr:hover td { background: rgba(255, 77, 0, 0.03); }
+    .pricing-plan { font-weight: 700; }
     .pricing-price {
       font-size: 1.25rem;
       font-weight: 800;
       color: var(--accent);
     }
-
-    .pricing-price span {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--muted);
-    }
-
+    .pricing-price span { font-size: 0.85rem; font-weight: 400; color: var(--muted); }
     .pricing-badge {
       display: inline-block;
       padding: 0.25rem 0.75rem;
@@ -922,46 +709,29 @@
       vertical-align: middle;
     }
 
-    /* CTA Section - 3D WhatsApp Button */
-    .cta {
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
+    /* CTA Section */
+    .cta { text-align: center; position: relative; overflow: hidden; }
     .cta-glow {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      width: 600px;
-      height: 600px;
+      width: 600px; height: 600px;
       background: radial-gradient(circle, var(--accent-glow), transparent 70%);
       opacity: 0.2;
       animation: ctaPulse 3s ease-in-out infinite;
     }
-
     @keyframes ctaPulse {
       0%, 100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
       50% { opacity: 0.4; transform: translate(-50%, -50%) scale(1.1); }
     }
-
-    .cta-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta h2 {
-      margin-bottom: 1rem;
-    }
-
+    .cta-content { position: relative; z-index: 1; }
+    .cta h2 { margin-bottom: 1rem; }
     .cta-subtitle {
       font-size: 1.125rem;
       color: var(--fg-secondary);
       max-width: 500px;
       margin: 0 auto 2.5rem;
     }
-
     .cta-whatsapp-3d {
       display: inline-flex;
       align-items: center;
@@ -978,7 +748,6 @@
       transition: all 0.4s ease;
       animation: whatsappPulse 2s ease-in-out infinite;
     }
-
     .cta-whatsapp-3d::before {
       content: '';
       position: absolute;
@@ -989,33 +758,18 @@
       filter: blur(15px);
       opacity: 0.6;
     }
-
     @keyframes whatsappPulse {
-      0%, 100% {
-        box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
-        transform: translateY(0);
-      }
-      50% {
-        box-shadow: 0 20px 60px rgba(37, 211, 102, 0.6);
-        transform: translateY(-5px);
-      }
+      0%, 100% { box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4); transform: translateY(0); }
+      50% { box-shadow: 0 20px 60px rgba(37, 211, 102, 0.6); transform: translateY(-5px); }
     }
-
     .cta-whatsapp-3d:hover {
       transform: translateY(-8px) scale(1.05);
       animation-play-state: paused;
     }
-
-    .cta-whatsapp-3d i {
-      font-size: 1.5rem;
-    }
+    .cta-whatsapp-3d i { font-size: 1.5rem; }
 
     /* Footer */
-    .footer {
-      padding: 3rem 0;
-      border-top: 1px solid var(--border);
-    }
-
+    .footer { padding: 3rem 0; border-top: 1px solid var(--border); }
     .footer-content {
       display: flex;
       flex-direction: column;
@@ -1023,15 +777,9 @@
       gap: 1.5rem;
       text-align: center;
     }
-
     @media (min-width: 768px) {
-      .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-      }
+      .footer-content { flex-direction: row; justify-content: space-between; text-align: left; }
     }
-
     .footer-logo {
       font-size: 1.25rem;
       font-weight: 800;
@@ -1040,26 +788,17 @@
       align-items: center;
       gap: 0.5rem;
     }
-
     .footer-logo-icon {
-      width: 32px;
-      height: 32px;
+      width: 32px; height: 32px;
       background: linear-gradient(135deg, var(--accent), var(--accent-light));
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
     }
-
-    .footer-social {
-      display: flex;
-      gap: 1rem;
-    }
-
+    .footer-social { display: flex; gap: 1rem; }
     .footer-social a {
-      width: 44px;
-      height: 44px;
+      width: 44px; height: 44px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -1070,18 +809,13 @@
       font-size: 1.1rem;
       transition: all 0.3s ease;
     }
-
     .footer-social a:hover {
       background: var(--accent);
       border-color: var(--accent);
       color: white;
       transform: translateY(-3px);
     }
-
-    .footer-copy {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); }
 
     /* Floating WhatsApp Button */
     .whatsapp-float {
@@ -1089,8 +823,7 @@
       bottom: 1.5rem;
       right: 1.5rem;
       z-index: 999;
-      width: 60px;
-      height: 60px;
+      width: 60px; height: 60px;
       background: linear-gradient(135deg, #25d366, #128c7e);
       border-radius: 50%;
       display: flex;
@@ -1103,23 +836,11 @@
       transition: all 0.3s ease;
       animation: floatPulse 2s ease-in-out infinite;
     }
-
     @keyframes floatPulse {
-      0%, 100% {
-        box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
-        transform: scale(1);
-      }
-      50% {
-        box-shadow: 0 8px 40px rgba(37, 211, 102, 0.7);
-        transform: scale(1.1);
-      }
+      0%, 100% { box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5); transform: scale(1); }
+      50% { box-shadow: 0 8px 40px rgba(37, 211, 102, 0.7); transform: scale(1.1); }
     }
-
-    .whatsapp-float:hover {
-      transform: scale(1.2);
-      animation-play-state: paused;
-    }
-
+    .whatsapp-float:hover { transform: scale(1.2); animation-play-state: paused; }
     .whatsapp-float::before {
       content: '';
       position: absolute;
@@ -1129,40 +850,27 @@
       z-index: -1;
       animation: ripple 2s ease-out infinite;
     }
-
     @keyframes ripple {
       0% { transform: scale(1); opacity: 0.5; }
       100% { transform: scale(1.5); opacity: 0; }
     }
 
-    /* Animations */
+    /* Animation Utilities */
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
     .animate-on-scroll {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-
-    .animate-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
+    .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
     .delay-1 { transition-delay: 0.1s; }
     .delay-2 { transition-delay: 0.2s; }
     .delay-3 { transition-delay: 0.3s; }
 
-    /* Progressive Enhancement - No JS fallback */
+    noscript .no-js-message { display: block; }
     .no-js-message {
       display: none;
       padding: 2rem;
@@ -1171,29 +879,21 @@
       margin: 2rem;
       border-radius: 8px;
     }
-
-    noscript .no-js-message {
-      display: block;
-    }
   </style>
 </head>
 <body>
-  <!-- No JS Fallback -->
   <noscript>
     <div class="no-js-message">
       <h3>JavaScript Required</h3>
-      <p>Please enable JavaScript for the full 3D experience. Contact us at +91 9599234747</p>
+      <p>Please enable JavaScript for the full 3D experience. Contact us at +91 987654321</p>
     </div>
   </noscript>
 
-  <!-- Parallax Background -->
   <div class="parallax-bg" aria-hidden="true">
     <div class="parallax-layer parallax-gradient" data-speed="0.1"></div>
     <div class="parallax-layer parallax-grid" data-speed="0.2"></div>
-    <div class="parallax-layer parallax-noise" data-speed="0.05"></div>
   </div>
 
-  <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#" class="logo">
@@ -1206,13 +906,12 @@
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="https://wa.me/919599234747?text=Hi%2C%20I%20want%20to%20join%20Elite%20Fitness%20Hub" class="btn btn-whatsapp nav-cta" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/987654321?text=Hi%2C%20I%20want%20to%20join%20Elite%20Fitness%20Hub" class="btn btn-whatsapp nav-cta" target="_blank" rel="noopener noreferrer">
         Join Now
       </a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container">
       <div class="hero-content">
@@ -1227,11 +926,11 @@
             Your transformation starts here.
           </p>
           <div class="hero-cta">
-            <a href="https://wa.me/919599234747?text=Hi%2C%20I%20want%20to%20join%20Elite%20Fitness%20Hub" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/987654321?text=Hi%2C%20I%20want%20to%20join%20Elite%20Fitness%20Hub" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-whatsapp"></i>
               Join Elite Fitness
             </a>
-            <a href="#services" class="btn btn-primary" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">
+            <a href="#services" class="btn" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">
               Explore Services
             </a>
           </div>
@@ -1252,7 +951,6 @@
     </div>
   </section>
 
-  <!-- Services Section - 3D Flip Cards -->
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
@@ -1263,9 +961,7 @@
       <div class="services-grid">
         <div class="flip-card animate-on-scroll delay-1" onclick="this.classList.toggle('flipped')">
           <div class="flip-card-front">
-            <div class="flip-card-icon">
-              <i class="fas fa-dumbbell"></i>
-            </div>
+            <div class="flip-card-icon"><i class="fas fa-dumbbell"></i></div>
             <h3>Weight Training</h3>
             <p>Build strength and muscle with our comprehensive weight training program</p>
             <span class="flip-hint"><i class="fas fa-sync-alt"></i> Click to flip</span>
@@ -1276,19 +972,14 @@
               <li><i class="fas fa-check"></i> Free weights & machines</li>
               <li><i class="fas fa-check"></i> Personalized programs</li>
               <li><i class="fas fa-check"></i> Form correction</li>
-              <li><i class="fas fa-check"></i> Progressive tracking</li>
             </ul>
-            <a href="https://wa.me/919599234747?text=Hi%2C%20I%27m%20interested%20in%20Weight%20Training" class="btn" target="_blank" rel="noopener noreferrer">
-              Book Session
-            </a>
+            <a href="https://wa.me/987654321?text=Hi%2C%20I%27m%20interested%20in%20Weight%20Training" class="btn" target="_blank" rel="noopener noreferrer">Book Session</a>
           </div>
         </div>
 
         <div class="flip-card animate-on-scroll delay-2" onclick="this.classList.toggle('flipped')">
           <div class="flip-card-front">
-            <div class="flip-card-icon">
-              <i class="fas fa-heartbeat"></i>
-            </div>
+            <div class="flip-card-icon"><i class="fas fa-heartbeat"></i></div>
             <h3>Cardio Zone</h3>
             <p>Boost endurance and burn calories with state-of-the-art cardio equipment</p>
             <span class="flip-hint"><i class="fas fa-sync-alt"></i> Click to flip</span>
@@ -1299,19 +990,14 @@
               <li><i class="fas fa-check"></i> Treadmills & cycles</li>
               <li><i class="fas fa-check"></i> HIIT classes</li>
               <li><i class="fas fa-check"></i> Heart rate monitor</li>
-              <li><i class="fas fa-check"></i> Virtual routes</li>
             </ul>
-            <a href="https://wa.me/919599234747?text=Hi%2C%20I%27m%20interested%20in%20Cardio%20training" class="btn" target="_blank" rel="noopener noreferrer">
-              Book Session
-            </a>
+            <a href="https://wa.me/987654321?text=Hi%2C%20I%27m%20interested%20in%20Cardio%20training" class="btn" target="_blank" rel="noopener noreferrer">Book Session</a>
           </div>
         </div>
 
         <div class="flip-card animate-on-scroll delay-3" onclick="this.classList.toggle('flipped')">
           <div class="flip-card-front">
-            <div class="flip-card-icon">
-              <i class="fas fa-user-ninja"></i>
-            </div>
+            <div class="flip-card-icon"><i class="fas fa-user-ninja"></i></div>
             <h3>Personal Training</h3>
             <p>One-on-one sessions with certified trainers for maximum results</p>
             <span class="flip-hint"><i class="fas fa-sync-alt"></i> Click to flip</span>
@@ -1322,18 +1008,14 @@
               <li><i class="fas fa-check"></i> Certified trainers</li>
               <li><i class="fas fa-check"></i> Custom meal plans</li>
               <li><i class="fas fa-check"></i> Progress tracking</li>
-              <li><i class="fas fa-check"></i> Flexible timing</li>
             </ul>
-            <a href="https://wa.me/919599234747?text=Hi%2C%20I%27m%20interested%20in%20Personal%20Training" class="btn" target="_blank" rel="noopener noreferrer">
-              Book Session
-            </a>
+            <a href="https://wa.me/987654321?text=Hi%2C%20I%27m%20interested%20in%20Personal%20Training" class="btn" target="_blank" rel="noopener noreferrer">Book Session</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats Section - 3D Animated Counters -->
   <section class="stats" id="stats">
     <div class="container">
       <div class="section-header">
@@ -1343,37 +1025,24 @@
       </div>
       <div class="stats-grid">
         <div class="stat-card animate-on-scroll delay-1">
-          <div class="stat-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <div class="stat-number">
-            <span data-target="500">0</span>+
-          </div>
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-number"><span data-target="500">0</span>+</div>
           <div class="stat-label">Active Members</div>
         </div>
         <div class="stat-card animate-on-scroll delay-2">
-          <div class="stat-icon">
-            <i class="fas fa-medal"></i>
-          </div>
-          <div class="stat-number">
-            <span data-target="50">0</span>+
-          </div>
+          <div class="stat-icon"><i class="fas fa-medal"></i></div>
+          <div class="stat-number"><span data-target="50">0</span>+</div>
           <div class="stat-label">Expert Trainers</div>
         </div>
         <div class="stat-card animate-on-scroll delay-3">
-          <div class="stat-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <div class="stat-number">
-            <span data-target="95">0</span>%
-          </div>
+          <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="stat-number"><span data-target="95">0</span>%</div>
           <div class="stat-label">Member Retention</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section - 3D Carousel -->
   <section class="gallery" id="gallery">
     <div class="container">
       <div class="section-header">
@@ -1383,50 +1052,16 @@
       </div>
       <div class="carousel-container animate-on-scroll">
         <div class="carousel" id="carousel">
-          <div class="carousel-item">
-            <div class="carousel-image">
-              <i class="fas fa-dumbbell"></i>
-              <span>Free Weights Zone</span>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-image">
-              <i class="fas fa-running"></i>
-              <span>Cardio Section</span>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-image">
-              <i class="fas fa-bicycle"></i>
-              <span>Spin Studio</span>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-image">
-              <i class="fas fa-hot-tub"></i>
-              <span>Steam & Sauna</span>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-image">
-              <i class="fas fa-users"></i>
-              <span>Group Classes</span>
-            </div>
-          </div>
+          <!-- Items populated by JS to fix visibility logic -->
         </div>
       </div>
       <div class="carousel-nav">
-        <button class="carousel-btn" id="carousel-prev" aria-label="Previous slide">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-btn" id="carousel-next" aria-label="Next slide">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+        <button class="carousel-btn" id="carousel-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-btn" id="carousel-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials - Floating Bubbles -->
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-header">
@@ -1438,7 +1073,6 @@
     </div>
   </section>
 
-  <!-- Pricing Section -->
   <section class="pricing" id="pricing">
     <div class="container">
       <div class="section-header">
@@ -1482,7 +1116,6 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
   <section class="cta" id="contact">
     <div class="cta-glow"></div>
     <div class="container">
@@ -1492,7 +1125,7 @@
           Join Elite Fitness Hub today and start your journey towards a stronger, healthier you.
           First consultation is free!
         </p>
-        <a href="https://wa.me/919599234747?text=Hi%2C%20I%20want%20to%20join%20Elite%20Fitness%20Hub" class="cta-whatsapp-3d" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/987654321?text=Hi%2C%20I%20want%20to%20join%20Elite%20Fitness%20Hub" class="cta-whatsapp-3d" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-whatsapp"></i>
           Join Elite Fitness Now
         </a>
@@ -1500,7 +1133,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -1509,29 +1141,16 @@
           Elite Fitness Hub
         </div>
         <div class="footer-social">
-          <a href="https://instagram.com/elitefitnesshub" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://facebook.com/elitefitnesshub" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://youtube.com/@elitefitnesshub" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <i class="fab fa-youtube"></i>
-          </a>
+          <a href="https://instagram.com/elitefitnesshub" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/elitefitnesshub" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://youtube.com/@elitefitnesshub" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <p class="footer-copy" style="text-align: center; margin-top: 2rem;">
-        2024 Elite Fitness Hub. All rights reserved.
-      </p>
+      <p class="footer-copy" style="text-align: center; margin-top: 2rem;">2024 Elite Fitness Hub. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919599234747?text=Hi%2C%20I%20want%20to%20join%20Elite%20Fitness%20Hub" 
-     class="whatsapp-float" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/987654321?text=Hi%2C%20I%20want%20to%20join%20Elite%20Fitness%20Hub" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -1539,7 +1158,7 @@
   <script type="module">
     import * as THREE from 'three';
 
-    // Global variables - initialized first
+    // Global variables
     let scene, camera, renderer, gymGroup;
     let isDragging = false;
     let previousMousePosition = { x: 0, y: 0 };
@@ -1547,24 +1166,20 @@
     let currentRotation = { x: 0, y: 0 };
     let autoRotate = true;
     let clock = new THREE.Clock();
-    let animationId = null;
     
     const canvas = document.getElementById('hero-canvas');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function init3D() {
-      // Scene
       scene = new THREE.Scene();
       
-      // Camera
       const aspect = canvas.clientWidth / canvas.clientHeight;
       camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 1000);
       camera.position.z = 10;
       
-      // Renderer with performance settings
       renderer = new THREE.WebGLRenderer({ 
         canvas: canvas,
-        antialias: window.devicePixelRatio < 2, // Disable on high DPI for performance
+        antialias: window.devicePixelRatio < 2,
         alpha: true,
         powerPreference: 'high-performance'
       });
@@ -1572,7 +1187,6 @@
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.setClearColor(0x000000, 0);
       
-      // Lighting
       const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
       scene.add(ambientLight);
       
@@ -1584,85 +1198,42 @@
       accentLight.position.set(-3, 2, 4);
       scene.add(accentLight);
       
-      const backLight = new THREE.PointLight(0xff6a2c, 0.3, 15);
-      backLight.position.set(3, -2, -4);
-      scene.add(backLight);
-      
-      // Create gym equipment group
       gymGroup = new THREE.Group();
       
-      // Materials
-      const metalMaterial = new THREE.MeshStandardMaterial({
-        color: 0x666666,
-        metalness: 0.9,
-        roughness: 0.2
-      });
-      
-      const blackMaterial = new THREE.MeshStandardMaterial({
-        color: 0x1a1a1a,
-        metalness: 0.3,
-        roughness: 0.7
-      });
-      
-      const accentMaterial = new THREE.MeshStandardMaterial({
-        color: 0xff4d00,
-        metalness: 0.4,
-        roughness: 0.3,
-        emissive: 0xff4d00,
-        emissiveIntensity: 0.2
-      });
-      
-      const plateMaterial = new THREE.MeshStandardMaterial({
-        color: 0x2a2a2a,
-        metalness: 0.5,
-        roughness: 0.5
-      });
+      const metalMaterial = new THREE.MeshStandardMaterial({ color: 0x666666, metalness: 0.9, roughness: 0.2 });
+      const blackMaterial = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, metalness: 0.3, roughness: 0.7 });
+      const accentMaterial = new THREE.MeshStandardMaterial({ color: 0xff4d00, metalness: 0.4, roughness: 0.3, emissive: 0xff4d00, emissiveIntensity: 0.2 });
+      const plateMaterial = new THREE.MeshStandardMaterial({ color: 0x2a2a2a, metalness: 0.5, roughness: 0.5 });
 
-      // ========== DUMBBELL 1 ==========
+      // Dumbbell 1
       const dumbbell1 = new THREE.Group();
-      
-      // Bar
       const bar1Geo = new THREE.CylinderGeometry(0.12, 0.12, 3.5, 16);
       const bar1 = new THREE.Mesh(bar1Geo, metalMaterial);
       bar1.rotation.z = Math.PI / 2;
       dumbbell1.add(bar1);
       
-      // Weight plates
       for (let i = 0; i < 3; i++) {
         const plateGeo = new THREE.CylinderGeometry(0.6 - i * 0.08, 0.6 - i * 0.08, 0.2, 16);
         const plate = new THREE.Mesh(plateGeo, i === 0 ? accentMaterial : plateMaterial);
         plate.rotation.z = Math.PI / 2;
         plate.position.x = -1.8 + i * 0.28;
         dumbbell1.add(plate);
-        
         const plate2 = plate.clone();
         plate2.position.x = 1.8 - i * 0.28;
         dumbbell1.add(plate2);
       }
-      
-      // End caps
-      const capGeo = new THREE.SphereGeometry(0.2, 12, 12);
-      const cap1 = new THREE.Mesh(capGeo, metalMaterial);
-      cap1.position.x = -2.4;
-      dumbbell1.add(cap1);
-      const cap2 = cap1.clone();
-      cap2.position.x = 2.4;
-      dumbbell1.add(cap2);
-      
       dumbbell1.position.set(-2.5, 1.5, 0);
       dumbbell1.rotation.z = 0.3;
       gymGroup.add(dumbbell1);
 
-      // ========== DUMBBELL 2 ==========
+      // Dumbbell 2
       const dumbbell2 = dumbbell1.clone();
       dumbbell2.position.set(2.5, -1.5, 0);
       dumbbell2.rotation.z = -0.3;
       gymGroup.add(dumbbell2);
 
-      // ========== TREADMILL ==========
+      // Treadmill
       const treadmill = new THREE.Group();
-      
-      // Base frame
       const frameGeo = new THREE.BoxGeometry(0.15, 0.8, 2.5);
       const frame1 = new THREE.Mesh(frameGeo, blackMaterial);
       frame1.position.x = -0.6;
@@ -1671,122 +1242,44 @@
       frame2.position.x = 0.6;
       treadmill.add(frame2);
       
-      // Running belt
       const beltGeo = new THREE.BoxGeometry(1.1, 0.05, 2.2);
-      const beltMat = new THREE.MeshStandardMaterial({
-        color: 0x333333,
-        metalness: 0.1,
-        roughness: 0.9
-      });
+      const beltMat = new THREE.MeshStandardMaterial({ color: 0x333333, metalness: 0.1, roughness: 0.9 });
       const belt = new THREE.Mesh(beltGeo, beltMat);
       belt.position.y = 0.15;
       treadmill.add(belt);
       
-      // Console stand
-      const standGeo = new THREE.BoxGeometry(0.1, 1, 0.1);
-      const stand1 = new THREE.Mesh(standGeo, blackMaterial);
-      stand1.position.set(-0.5, 0.9, -1.1);
-      treadmill.add(stand1);
-      const stand2 = stand1.clone();
-      stand2.position.x = 0.5;
-      treadmill.add(stand2);
-      
-      // Console
       const consoleGeo = new THREE.BoxGeometry(1.1, 0.5, 0.1);
       const consoleMesh = new THREE.Mesh(consoleGeo, blackMaterial);
-      consoleMesh.position.set(0, 1.4, -1.1);
+      consoleMesh.position.set(0, 0.8, -1.1);
       treadmill.add(consoleMesh);
-      
-      // Console screen
-      const screenGeo = new THREE.BoxGeometry(0.9, 0.35, 0.02);
-      const screenMat = new THREE.MeshStandardMaterial({
-        color: 0xff4d00,
-        emissive: 0xff4d00,
-        emissiveIntensity: 0.5
-      });
-      const screen = new THREE.Mesh(screenGeo, screenMat);
-      screen.position.set(0, 1.4, -1.03);
-      treadmill.add(screen);
-      
-      // Handles
-      const handleGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.6, 8);
-      const handle1 = new THREE.Mesh(handleGeo, accentMaterial);
-      handle1.position.set(-0.5, 1, -0.9);
-      treadmill.add(handle1);
-      const handle2 = handle1.clone();
-      handle2.position.x = 0.5;
-      treadmill.add(handle2);
       
       treadmill.position.set(0, 0, -2);
       treadmill.rotation.y = 0.5;
       gymGroup.add(treadmill);
 
-      // ========== WEIGHT PLATE STACK ==========
-      const stack = new THREE.Group();
-      for (let i = 0; i < 5; i++) {
-        const plateGeo = new THREE.CylinderGeometry(0.4 - i * 0.04, 0.4 - i * 0.04, 0.15, 16);
-        const plate = new THREE.Mesh(plateGeo, i % 2 === 0 ? plateMaterial : accentMaterial);
-        plate.position.y = i * 0.18 - 0.4;
-        stack.add(plate);
-      }
-      // Center rod
-      const rodGeo = new THREE.CylinderGeometry(0.05, 0.05, 1.5, 8);
-      const rod = new THREE.Mesh(rodGeo, metalMaterial);
-      stack.add(rod);
-      
-      stack.position.set(-3.5, -0.5, -1);
-      stack.rotation.x = Math.PI / 2;
-      gymGroup.add(stack);
-
-      // ========== KETTLEBELL ==========
-      const kettlebell = new THREE.Group();
-      
-      const ballGeo = new THREE.SphereGeometry(0.35, 16, 16);
-      const ball = new THREE.Mesh(ballGeo, blackMaterial);
-      kettlebell.add(ball);
-      
-      const handleGeo = new THREE.TorusGeometry(0.18, 0.05, 8, 16, Math.PI);
-      const handle = new THREE.Mesh(handleGeo, metalMaterial);
-      handle.position.y = 0.35;
-      handle.rotation.x = Math.PI;
-      kettlebell.add(handle);
-      
-      kettlebell.position.set(3.5, 0, -1);
-      gymGroup.add(kettlebell);
-
-      // Add gym group to scene
       scene.add(gymGroup);
-      
-      // Start animation loop
       animate();
     }
 
     function animate() {
-      animationId = requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
       
       if (!prefersReducedMotion) {
         const time = clock.getElapsedTime();
+        if (autoRotate && !isDragging) targetRotation.y += 0.003;
         
-        // Auto rotation
-        if (autoRotate && !isDragging) {
-          targetRotation.y += 0.003;
-        }
-        
-        // Smooth rotation interpolation
         currentRotation.x += (targetRotation.x - currentRotation.x) * 0.06;
         currentRotation.y += (targetRotation.y - currentRotation.y) * 0.06;
         
         gymGroup.rotation.x = currentRotation.x;
         gymGroup.rotation.y = currentRotation.y;
-        
-        // Floating animation
         gymGroup.position.y = Math.sin(time * 0.5) * 0.15;
       }
       
       renderer.render(scene, camera);
     }
 
-    // Event handlers
+    // Event Listeners for 3D
     function onPointerDown(e) {
       isDragging = true;
       autoRotate = false;
@@ -1794,41 +1287,27 @@
       previousMousePosition = { x: point.clientX, y: point.clientY };
       canvas.style.cursor = 'grabbing';
     }
-
     function onPointerMove(e) {
       if (!isDragging) return;
-      
       const point = e.touches ? e.touches[0] : e;
-      const deltaMove = {
-        x: point.clientX - previousMousePosition.x,
-        y: point.clientY - previousMousePosition.y
-      };
-      
+      const deltaMove = { x: point.clientX - previousMousePosition.x, y: point.clientY - previousMousePosition.y };
       targetRotation.y += deltaMove.x * 0.008;
       targetRotation.x += deltaMove.y * 0.008;
       targetRotation.x = Math.max(-0.5, Math.min(0.5, targetRotation.x));
-      
       previousMousePosition = { x: point.clientX, y: point.clientY };
     }
-
     function onPointerUp() {
       isDragging = false;
       canvas.style.cursor = 'grab';
-      setTimeout(function() {
-        if (!isDragging) autoRotate = true;
-      }, 3000);
+      setTimeout(() => { if (!isDragging) autoRotate = true; }, 3000);
     }
-
     function onResize() {
       if (!camera || !renderer) return;
-      const width = canvas.clientWidth;
-      const height = canvas.clientHeight;
-      camera.aspect = width / height;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(width, height);
+      renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     }
 
-    // Add event listeners
     canvas.addEventListener('mousedown', onPointerDown);
     canvas.addEventListener('touchstart', onPointerDown, { passive: true });
     window.addEventListener('mousemove', onPointerMove);
@@ -1837,116 +1316,127 @@
     window.addEventListener('touchend', onPointerUp);
     window.addEventListener('resize', onResize);
 
-    // Initialize 3D scene
     init3D();
   </script>
 
-  <!-- Main JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       
-      // ===== Scroll Reveal Animation =====
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
+      // --- 1. WhatsApp Number Update ---
+      // Already handled in HTML static replacement.
+      // wa.me/987654321
 
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
+      // --- 2. Scroll Reveal Animation ---
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
         });
-      }, observerOptions);
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-      document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
-        observer.observe(el);
-      });
-
-      // ===== Counter Animation =====
-      const counterObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
+      // --- 3. Counter Animation ---
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const counters = entry.target.querySelectorAll('[data-target]');
-            counters.forEach(function(counter) {
+            counters.forEach(counter => {
               const target = parseInt(counter.getAttribute('data-target'));
               let current = 0;
               const increment = target / 60;
-              const duration = 2000;
-              const stepTime = duration / 60;
-              
-              function updateCounter() {
+              const update = () => {
                 current += increment;
                 if (current < target) {
                   counter.textContent = Math.floor(current);
-                  setTimeout(updateCounter, stepTime);
+                  setTimeout(update, 2000 / 60);
                 } else {
                   counter.textContent = target;
                 }
-              }
-              updateCounter();
+              };
+              update();
             });
             counterObserver.unobserve(entry.target);
           }
         });
       }, { threshold: 0.5 });
-
+      
       const statsSection = document.querySelector('.stats');
-      if (statsSection) {
-        counterObserver.observe(statsSection);
-      }
+      if (statsSection) counterObserver.observe(statsSection);
 
-      // ===== 3D Carousel =====
+      // --- 4. Gallery Carousel Fix (Visibility & Radius) ---
       const carousel = document.getElementById('carousel');
+      const carouselData = [
+        { icon: 'fa-dumbbell', label: 'Free Weights Zone' },
+        { icon: 'fa-running', label: 'Cardio Section' },
+        { icon: 'fa-bicycle', label: 'Spin Studio' },
+        { icon: 'fa-hot-tub', label: 'Steam & Sauna' },
+        { icon: 'fa-users', label: 'Group Classes' }
+      ];
+
+      // Create items dynamically
+      carousel.innerHTML = '';
+      carouselData.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'carousel-item';
+        div.innerHTML = `
+          <div class="carousel-image">
+            <i class="fas ${item.icon}"></i>
+            <span>${item.label}</span>
+          </div>
+        `;
+        carousel.appendChild(div);
+      });
+
       const items = carousel.querySelectorAll('.carousel-item');
       const totalItems = items.length;
       let currentSlide = 0;
       const angleStep = 360 / totalItems;
-      const radius = 350;
+      
+      // Responsive radius
+      const getRadius = () => window.innerWidth < 768 ? 180 : 350;
 
       function positionCarousel() {
-        items.forEach(function(item, index) {
+        const radius = getRadius();
+        items.forEach((item, index) => {
           const angle = angleStep * (index - currentSlide);
           const radian = angle * (Math.PI / 180);
           const x = Math.sin(radian) * radius;
           const z = Math.cos(radian) * radius - radius;
           const rotateY = -angle;
           
-          item.style.transform = 'translateX(' + x + 'px) translateZ(' + z + 'px) rotateY(' + rotateY + 'deg)';
+          item.style.transform = `translateX(${x}px) translateZ(${z}px) rotateY(${rotateY}deg)`;
+          item.style.opacity = (Math.cos(radian) + 1) / 2; // Fade items in back
           item.classList.toggle('active', index === currentSlide);
         });
       }
 
       positionCarousel();
+      window.addEventListener('resize', positionCarousel); // Update on resize
 
-      document.getElementById('carousel-next').addEventListener('click', function() {
+      document.getElementById('carousel-next').addEventListener('click', () => {
         currentSlide = (currentSlide + 1) % totalItems;
         positionCarousel();
       });
-
-      document.getElementById('carousel-prev').addEventListener('click', function() {
+      document.getElementById('carousel-prev').addEventListener('click', () => {
         currentSlide = (currentSlide - 1 + totalItems) % totalItems;
         positionCarousel();
       });
 
-      // Auto-rotate carousel
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        setInterval(function() {
+        setInterval(() => {
           currentSlide = (currentSlide + 1) % totalItems;
           positionCarousel();
         }, 4000);
       }
 
-      // ===== Floating Testimonials =====
+      // --- 5. Testimonials (Success Stories) Fix ---
+      const testimonialsContainer = document.getElementById('testimonials-container');
       const testimonialsData = [
         { text: "Lost 20 kgs in 4 months! The trainers here are incredibly supportive.", name: "Rahul S.", role: "Member since 2023" },
-        { text: "Best gym in the city. Clean equipment, great atmosphere, amazing community.", name: "Priya M.", role: "Member since 2022" },
+        { text: "Best gym in the city. Clean equipment, great atmosphere.", name: "Priya M.", role: "Member since 2022" },
         { text: "The personal training program changed my life. Highly recommend!", name: "Amit K.", role: "Member since 2024" },
         { text: "24/7 access is perfect for my night shifts. Love this place!", name: "Neha G.", role: "Member since 2023" },
         { text: "Group classes are so much fun! Zumba and HIIT are my favorites.", name: "Vikram T.", role: "Member since 2022" }
       ];
-
-      const testimonialsContainer = document.getElementById('testimonials-container');
       let bubbleIndex = 0;
 
       function createBubble() {
@@ -1956,85 +1446,66 @@
         const bubble = document.createElement('div');
         bubble.className = 'testimonial-bubble';
         
-        const left = 10 + Math.random() * 80;
+        // Spread bubbles across the width
+        const left = 5 + Math.random() * 80; 
         const delay = Math.random() * 2;
-        const duration = 12 + Math.random() * 6;
+        const duration = 15 + Math.random() * 5;
         
         bubble.style.left = left + '%';
+        // Start below the fold of the container
+        bubble.style.top = '100%'; 
         bubble.style.animationDelay = delay + 's';
         bubble.style.animationDuration = duration + 's';
         
-        bubble.innerHTML = 
-          '<p class="testimonial-text">"' + data.text + '"</p>' +
-          '<div class="testimonial-author">' +
-            '<div class="testimonial-avatar">' + data.name.charAt(0) + '</div>' +
-            '<div>' +
-              '<div class="testimonial-name">' + data.name + '</div>' +
-              '<div class="testimonial-role">' + data.role + '</div>' +
-            '</div>' +
-          '</div>';
+        bubble.innerHTML = `
+          <p class="testimonial-text">"${data.text}"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">${data.name.charAt(0)}</div>
+            <div>
+              <div class="testimonial-name">${data.name}</div>
+              <div class="testimonial-role">${data.role}</div>
+            </div>
+          </div>`;
         
         testimonialsContainer.appendChild(bubble);
         
-        setTimeout(function() {
-          bubble.classList.add('active');
-        }, 100);
+        // Trigger reflow and add active class
+        void bubble.offsetWidth;
+        bubble.classList.add('active');
         
-        setTimeout(function() {
+        // Remove after animation completes
+        setTimeout(() => {
           bubble.remove();
         }, (delay + duration) * 1000 + 1000);
         
         bubbleIndex++;
       }
 
-      // Create bubbles periodically
+      // Start creating bubbles immediately
+      createBubble();
       setInterval(createBubble, 3000);
-      
-      // Initial bubbles
-      setTimeout(function() { createBubble(); }, 500);
-      setTimeout(function() { createBubble(); }, 1500);
 
-      // ===== Parallax Background =====
+      // --- Parallax & Nav ---
       const parallaxLayers = document.querySelectorAll('.parallax-layer');
-      
-      function updateParallax() {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        
-        const scrollY = window.pageYOffset;
-        parallaxLayers.forEach(function(layer) {
-          const speed = parseFloat(layer.getAttribute('data-speed')) || 0.1;
-          layer.style.transform = 'translateY(' + (scrollY * speed) + 'px)';
-        });
-      }
-
-      window.addEventListener('scroll', updateParallax, { passive: true });
-
-      // ===== Navigation Scroll Effect =====
       const nav = document.querySelector('.nav');
       
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
+      window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+        parallaxLayers.forEach(layer => {
+          const speed = parseFloat(layer.getAttribute('data-speed')) || 0.1;
+          layer.style.transform = `translateY(${scrollY * speed}px)`;
+        });
+        if (window.scrollY > 50) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
       }, { passive: true });
 
-      // ===== Smooth Scroll =====
-      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          
+      // --- Smooth Scroll ---
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
           e.preventDefault();
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            const navHeight = nav.offsetHeight;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-            });
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         });
       });
